@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  h1.text-center Address Locator 
+  .container
+    .row
+      .col-sm-12
+        div
+          form(action='/', method='post')
+            .form-group
+              h3 Enter Address:
+              input#address.form-control(type="text" name="address")
+            button#btn.btn.btn-primary.btn-lg.btn-block(type='submit')
+              | Submit
+            .form-group
+              h3 Location: #{address}
+              .form-group
+                label Latitude:
+                textarea#lat.form-control(type="text" name="lat")=lat
+              .form-group
+                label Latitude:
+                textarea#long.form-control(type="text" name="long")=long
+
